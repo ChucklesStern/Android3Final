@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/root/.android/build-cache/6638438e5600e14fd392404363283b559c29d2bb/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/root/.android/build-cache/6638438e5600e14fd392404363283b559c29d2bb/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/root/.android/build-cache/6638438e5600e14fd392404363283b559c29d2bb/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/root/.android/build-cache/6638438e5600e14fd392404363283b559c29d2bb/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    }
+]

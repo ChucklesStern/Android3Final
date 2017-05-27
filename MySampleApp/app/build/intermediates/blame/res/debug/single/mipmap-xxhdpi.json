@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/splash_icon.png",
+        "source": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/src/main/res/mipmap-xxhdpi/splash_icon.png"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    }
+]

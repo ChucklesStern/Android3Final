@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/AWSMobileHelper/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/root/.android/build-cache/83ee0b18181f9b4f36bebdb8e20373b2a4a856b9/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/AWSMobileHelper/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/root/.android/build-cache/83ee0b18181f9b4f36bebdb8e20373b2a4a856b9/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    }
+]
