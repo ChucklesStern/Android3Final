@@ -1,4 +1,4 @@
-#Sun May 28 22:54:55 UTC 2017
+#Mon May 29 01:55:23 UTC 2017
 base.0=/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2
 renamed.0=classes.dex
 file.0=/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex

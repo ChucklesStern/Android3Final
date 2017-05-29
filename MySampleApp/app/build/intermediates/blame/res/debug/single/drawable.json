@@ -32,6 +32,10 @@
         "source": "/root/.android/build-cache/6638438e5600e14fd392404363283b559c29d2bb/output/res/drawable/abc_ic_clear_material.xml"
     },
     {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
+        "source": "/root/.android/build-cache/d48f3554797496bd8c717b30ad1ad0c683fba436/output/res/drawable/design_bottom_navigation_item_background.xml"
+    },
+    {
         "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_round.xml",
         "source": "/root/.android/build-cache/fbcf4ba9ac49a6474786cbcf55263b5458d838f5/output/res/drawable/messenger_button_white_bg_round.xml"
     },
@@ -126,6 +130,10 @@
     {
         "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_icon.xml",
         "source": "/root/.android/build-cache/fbcf4ba9ac49a6474786cbcf55263b5458d838f5/output/res/drawable/com_facebook_button_icon.xml"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/drawable/design_password_eye.xml",
+        "source": "/root/.android/build-cache/d48f3554797496bd8c717b30ad1ad0c683fba436/output/res/drawable/design_password_eye.xml"
     },
     {
         "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
