@@ -1,4 +1,4 @@
-#Sat May 27 17:20:35 UTC 2017
+#Sun May 28 22:54:54 UTC 2017
 file.9=/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ac136481b6653e109d05bf79aaacc064e8679fa3/classes.dex
 base.10=/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_7f08ea06070691af023e3552a932801480b66c5e
 file.8=/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_76f81077aea9bd1699aabfb9818dc8fa3bde44df/classes.dex

@@ -122,6 +122,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.mysampleapp.inventorydata.ImageDetailActivity" />
+        <activity android:name="com.mysampleapp.inventorydata.ImageGridActivity" />
         <activity
             android:name="com.amazonaws.mobilehelper.auth.signin.SignInActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"

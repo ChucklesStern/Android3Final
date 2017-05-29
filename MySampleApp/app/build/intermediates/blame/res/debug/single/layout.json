@@ -100,12 +100,12 @@
         "source": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/AWSMobileHelper/build/intermediates/bundles/default/res/layout/activity_sign_up_confirm.xml"
     },
     {
-        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
-        "source": "/root/.android/build-cache/6638438e5600e14fd392404363283b559c29d2bb/output/res/layout/abc_dialog_title_material.xml"
-    },
-    {
         "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/layout/activity_image_detail.xml",
         "source": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/src/main/res/layout/activity_image_detail.xml"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/root/.android/build-cache/6638438e5600e14fd392404363283b559c29d2bb/output/res/layout/abc_dialog_title_material.xml"
     },
     {
         "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_large.xml",
@@ -254,6 +254,10 @@
     {
         "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/layout/com_facebook_device_auth_dialog_fragment.xml",
         "source": "/root/.android/build-cache/fbcf4ba9ac49a6474786cbcf55263b5458d838f5/output/res/layout/com_facebook_device_auth_dialog_fragment.xml"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/layout/image_detail_fragment.xml",
+        "source": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/src/main/res/layout/image_detail_fragment.xml"
     },
     {
         "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",

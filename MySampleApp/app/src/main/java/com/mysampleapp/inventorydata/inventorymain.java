@@ -32,17 +32,17 @@ import com.mysampleapp.R;
 import com.mysampleapp.demo.DemoFragmentBase;
 import com.mysampleapp.provider.Images;
 
-public class inventorymain extends DemoFragmentBase {
+public class inventorymain extends DemoFragmentBase implements AdapterView.OnItemClickListener {
 
-    private View mFragmentView;
+  //  private View mFragmentView;
     private static final String TAG = "ImageGridFragment";
     private static final String IMAGE_CACHE_DIR = "thumbs";
 
     private int mImageThumbSize;
     private int mImageThumbSpacing;
-    private inventorymain2.ImageAdapter mAdapter;
-    private ImageFetcher mImageFetcher;
-
+    public ImageAdapter mAdapter;
+    public ImageFetcher mImageFetcher;
+/*
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              final Bundle savedInstanceState) {
@@ -52,11 +52,91 @@ public class inventorymain extends DemoFragmentBase {
 
         return mFragmentView;
     }
+*/
+public View onCreateView(
+        LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-    public class inventorymain2 extends AppCompatActivity implements AdapterView.OnItemClickListener {
+    final View v = inflater.inflate(R.layout.activity_inventorymain, container, false);
+    final GridView mGridView = (GridView) v.findViewById(R.id.gridView);
+    mGridView.setAdapter(mAdapter);
+    mGridView.setOnItemClickListener(this);
+    mGridView.setOnScrollListener(new AbsListView.OnScrollListener() {
+        @Override
+        public void onScrollStateChanged(AbsListView absListView, int scrollState) {
+            // Pause fetcher to ensure smoother scrolling when flinging
+            if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_FLING) {
+                // Before Honeycomb pause image loading on scroll to help with performance
+                if (!Utils.hasHoneycomb()) {
+                    mImageFetcher.setPauseWork(true);
+                }
+            } else {
+                mImageFetcher.setPauseWork(false);
+            }
+        }
 
         @Override
-        protected void onCreate(Bundle savedInstanceState) {
+        public void onScroll(AbsListView absListView, int firstVisibleItem,
+                             int visibleItemCount, int totalItemCount) {
+        }
+    });
+    mGridView.getViewTreeObserver().addOnGlobalLayoutListener(
+            new ViewTreeObserver.OnGlobalLayoutListener() {
+                @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+                @Override
+                public void onGlobalLayout() {
+                    if (mAdapter.getNumColumns() == 0) {
+                        final int numColumns = (int) Math.floor(
+                                mGridView.getWidth() / (mImageThumbSize + mImageThumbSpacing));
+                        if (numColumns > 0) {
+                            final int columnWidth =
+                                    (mGridView.getWidth() / numColumns) - mImageThumbSpacing;
+                            mAdapter.setNumColumns(numColumns);
+                            mAdapter.setItemHeight(columnWidth);
+                            if (BuildConfig.DEBUG) {
+                                Log.d(TAG, "onCreateView - numColumns set to " + numColumns);
+                            }
+                            if (Utils.hasJellyBean()) {
+                                mGridView.getViewTreeObserver()
+                                        .removeOnGlobalLayoutListener(this);
+                            } else {
+                                mGridView.getViewTreeObserver()
+                                        .removeGlobalOnLayoutListener(this);
+                            }
+                        }
+                    }
+                }
+            });
+
+    return v;
+}
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+    @Override
+    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+        final Intent i = new Intent(getActivity(), ImageDetailActivity.class);
+        i.putExtra(ImageDetailActivity.EXTRA_IMAGE, (int) id);
+        if (Utils.hasJellyBean()) {
+            // makeThumbnailScaleUpAnimation() looks kind of ugly here as the loading spinner may
+            // show plus the thumbnail image in GridView is cropped. so using
+            // makeScaleUpAnimation() instead.
+            ActivityOptions options =
+                    ActivityOptions.makeScaleUpAnimation(v, 0, 0, v.getWidth(), v.getHeight());
+            getActivity().startActivity(i, options.toBundle());
+        } else {
+            startActivity(i);
+        }
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.main_menu, menu);
+    }
+
+
+
+        public inventorymain() {}
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             //  setContentView(R.layout.activity_inventorymain);
             mImageThumbSize = getResources().getDimensionPixelSize(R.dimen.image_thumbnail_size);
@@ -72,64 +152,6 @@ public class inventorymain extends DemoFragmentBase {
             mImageFetcher = new ImageFetcher(getActivity(), mImageThumbSize);
             mImageFetcher.setLoadingImage(R.drawable.empty_photo);
             mImageFetcher.addImageCache(getActivity().getSupportFragmentManager(), cacheParams);
-        }
-
-        //dropeed OVerride
-        public View onCreateView(
-                LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-            final View v = inflater.inflate(R.layout.activity_inventorymain, container, false);
-            final GridView mGridView = (GridView) v.findViewById(R.id.gridView);
-            mGridView.setAdapter(mAdapter);
-            mGridView.setOnItemClickListener(this);
-            mGridView.setOnScrollListener(new AbsListView.OnScrollListener() {
-                @Override
-                public void onScrollStateChanged(AbsListView absListView, int scrollState) {
-                    // Pause fetcher to ensure smoother scrolling when flinging
-                    if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_FLING) {
-                        // Before Honeycomb pause image loading on scroll to help with performance
-                        if (!Utils.hasHoneycomb()) {
-                            mImageFetcher.setPauseWork(true);
-                        }
-                    } else {
-                        mImageFetcher.setPauseWork(false);
-                    }
-                }
-
-                @Override
-                public void onScroll(AbsListView absListView, int firstVisibleItem,
-                                     int visibleItemCount, int totalItemCount) {
-                }
-            });
-            mGridView.getViewTreeObserver().addOnGlobalLayoutListener(
-                    new ViewTreeObserver.OnGlobalLayoutListener() {
-                        @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-                        @Override
-                        public void onGlobalLayout() {
-                            if (mAdapter.getNumColumns() == 0) {
-                                final int numColumns = (int) Math.floor(
-                                        mGridView.getWidth() / (mImageThumbSize + mImageThumbSpacing));
-                                if (numColumns > 0) {
-                                    final int columnWidth =
-                                            (mGridView.getWidth() / numColumns) - mImageThumbSpacing;
-                                    mAdapter.setNumColumns(numColumns);
-                                    mAdapter.setItemHeight(columnWidth);
-                                    if (BuildConfig.DEBUG) {
-                                        Log.d(TAG, "onCreateView - numColumns set to " + numColumns);
-                                    }
-                                    if (Utils.hasJellyBean()) {
-                                        mGridView.getViewTreeObserver()
-                                                .removeOnGlobalLayoutListener(this);
-                                    } else {
-                                        mGridView.getViewTreeObserver()
-                                                .removeGlobalOnLayoutListener(this);
-                                    }
-                                }
-                            }
-                        }
-                    });
-
-            return v;
         }
 
         @Override
@@ -153,28 +175,6 @@ public class inventorymain extends DemoFragmentBase {
             mImageFetcher.closeCache();
         }
 
-        @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-        @Override
-        public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-            final Intent i = new Intent(getActivity(), ImageDetailActivity.class);
-            i.putExtra(ImageDetailActivity.EXTRA_IMAGE, (int) id);
-            if (Utils.hasJellyBean()) {
-                // makeThumbnailScaleUpAnimation() looks kind of ugly here as the loading spinner may
-                // show plus the thumbnail image in GridView is cropped. so using
-                // makeScaleUpAnimation() instead.
-                ActivityOptions options =
-                        ActivityOptions.makeScaleUpAnimation(v, 0, 0, v.getWidth(), v.getHeight());
-                getActivity().startActivity(i, options.toBundle());
-            } else {
-                startActivity(i);
-            }
-        }
-
-       //dropeed OVerride
-        public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-            inflater.inflate(R.menu.main_menu, menu);
-        }
-
         @Override
         public boolean onOptionsItemSelected(MenuItem item) {
             switch (item.getItemId()) {
@@ -187,7 +187,7 @@ public class inventorymain extends DemoFragmentBase {
             return super.onOptionsItemSelected(item);
         }
 
-        private class ImageAdapter extends BaseAdapter {
+        public class ImageAdapter extends BaseAdapter {
 
             private final Context mContext;
             private int mItemHeight = 0;
@@ -309,4 +309,3 @@ public class inventorymain extends DemoFragmentBase {
             }
         }
     }
-}

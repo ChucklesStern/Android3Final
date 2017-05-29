@@ -1,4 +1,4 @@
-#Sat May 27 17:20:36 UTC 2017
+#Sun May 28 22:54:56 UTC 2017
 base.0=/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b364a5cbae6d9571b6565cdc235e6ea7ed0e28c2
 renamed.1=classes.dex
 renamed.0=classes2.dex

@@ -92,12 +92,12 @@
         "source": "/root/.android/build-cache/83ee0b18181f9b4f36bebdb8e20373b2a4a856b9/output/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/AWSMobileHelper/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png",
-        "source": "/root/.android/build-cache/83ee0b18181f9b4f36bebdb8e20373b2a4a856b9/output/res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/AWSMobileHelper/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_star_black_36dp.png",
         "source": "/root/.android/build-cache/83ee0b18181f9b4f36bebdb8e20373b2a4a856b9/output/res/drawable-hdpi-v4/abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/AWSMobileHelper/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+        "source": "/root/.android/build-cache/83ee0b18181f9b4f36bebdb8e20373b2a4a856b9/output/res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
     {
         "merged": "/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/AWSMobileHelper/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",

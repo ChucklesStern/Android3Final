@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="c03f6ab95b10d67805817925c83eabd715214fda">
+        sha1="e8962ab91a7dd71c9dfb68d67c883349db7d93fc">
         <dex dex="/root/AndroidStudioProjects/androidFinal-aws-my-sample-app-android(1)/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b364a5cbae6d9571b6565cdc235e6ea7ed0e28c2/classes.dex" />
     </item>
     <item

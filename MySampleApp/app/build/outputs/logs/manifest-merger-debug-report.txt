@@ -194,7 +194,7 @@ MERGED from [MySampleApp:AWSMobileHelper:unspecified] /root/AndroidStudioProject
 MERGED from [com.facebook.android:facebook-android-sdk:4.20.0] /root/.android/build-cache/fbcf4ba9ac49a6474786cbcf55263b5458d838f5/output/AndroidManifest.xml:24:5-26:41
 MERGED from [com.android.support:cardview-v7:25.0.0] /root/.android/build-cache/76342bbb54933c648a3a0593cabc03e2da858d9e/output/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:customtabs:25.0.0] /root/.android/build-cache/890dce2fdfde9aa42cbdf6bfbfcc8531dc41e10b/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:multidex:1.0.1] /root/.android/build-cache/cca35db404cdcf08d1f1b7d8977a955edb59bb27/output/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:multidex:1.0.0] /root/.android/build-cache/558521db98132adb2f0559f0405c3c12b749fa01/output/AndroidManifest.xml:18:5-42
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /root/.android/build-cache/d67fdc34aebd8e06902e4096401dbd95ea1fbb08/output/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:design:24.2.1] /root/.android/build-cache/828f9e8e351ec647b2facf8b5ea49a02c96223ea/output/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:25.0.0] /root/.android/build-cache/6638438e5600e14fd392404363283b559c29d2bb/output/AndroidManifest.xml:21:5-23:78
